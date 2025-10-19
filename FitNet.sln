@@ -1,21 +1,21 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.14.36603.0 d17.14
+VisualStudioVersion = 17.14.36603.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.WebAPI", "FitNet.WebAPI.csproj", "{D5DCAB23-D72F-449E-BF30-F2D5F95217D4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.Contracts", "FitNet.Contracts\FitNet.Contracts.csproj", "{EB47A6DE-A946-BEE2-CAA6-4743C7D26E6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.Service", "..\FitNet.Service\FitNet.Service.csproj", "{9B5D99A0-76BB-4EBC-A48A-1C5484F63E8B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.DataAccess", "FitNet.DataAccess\FitNet.DataAccess.csproj", "{3C6E2082-3807-85BC-927F-F5874B7AC606}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.Domain", "..\FitNet.Domain\FitNet.Domain.csproj", "{046B6877-ED28-4EF2-A70E-78A56C933E47}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.Domain", "FitNet.Domain\FitNet.Domain.csproj", "{148F172A-06FE-C22E-B85D-E550AA6A5DD2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.Interfaces", "..\FitNet.Interfaces\FitNet.Interfaces.csproj", "{6E4C6BD3-586D-4564-94FA-7F92D4D679C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.Infrastructure", "FitNet.Infrastructure\FitNet.Infrastructure.csproj", "{43F45382-4B42-51D7-55C9-D04BB334AB4B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.DataAccess", "..\FitNet.DataAccess\FitNet.DataAccess.csproj", "{74A5D3D9-A933-4163-8B1C-34655155833E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.Interfaces", "FitNet.Interfaces\FitNet.Interfaces.csproj", "{A5A200FA-B593-5D06-425A-994DF8F0E08B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.Infrastructure", "..\FitNet.Infrastructure\FitNet.Infrastructure.csproj", "{09D14BF6-9C1C-4CA6-A13E-59D8C5693104}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.Service", "FitNet.Service\FitNet.Service.csproj", "{026EB6C0-9F03-5A80-DC6C-D73E86C7638D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.Contracts", "..\FitNet.Contracts\FitNet.Contracts.csproj", "{04AD5B45-3403-4D1F-94B8-C30DB8A9E380}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FitNet.WebAPI", "FitNet.WebAPI\FitNet.WebAPI.csproj", "{CBC03D07-85E1-115C-AB90-0957D588C2C9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,34 +23,34 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D5DCAB23-D72F-449E-BF30-F2D5F95217D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D5DCAB23-D72F-449E-BF30-F2D5F95217D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D5DCAB23-D72F-449E-BF30-F2D5F95217D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D5DCAB23-D72F-449E-BF30-F2D5F95217D4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9B5D99A0-76BB-4EBC-A48A-1C5484F63E8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9B5D99A0-76BB-4EBC-A48A-1C5484F63E8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9B5D99A0-76BB-4EBC-A48A-1C5484F63E8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9B5D99A0-76BB-4EBC-A48A-1C5484F63E8B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{046B6877-ED28-4EF2-A70E-78A56C933E47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{046B6877-ED28-4EF2-A70E-78A56C933E47}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{046B6877-ED28-4EF2-A70E-78A56C933E47}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{046B6877-ED28-4EF2-A70E-78A56C933E47}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6E4C6BD3-586D-4564-94FA-7F92D4D679C4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6E4C6BD3-586D-4564-94FA-7F92D4D679C4}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6E4C6BD3-586D-4564-94FA-7F92D4D679C4}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6E4C6BD3-586D-4564-94FA-7F92D4D679C4}.Release|Any CPU.Build.0 = Release|Any CPU
-		{74A5D3D9-A933-4163-8B1C-34655155833E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{74A5D3D9-A933-4163-8B1C-34655155833E}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{74A5D3D9-A933-4163-8B1C-34655155833E}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{74A5D3D9-A933-4163-8B1C-34655155833E}.Release|Any CPU.Build.0 = Release|Any CPU
-		{09D14BF6-9C1C-4CA6-A13E-59D8C5693104}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{09D14BF6-9C1C-4CA6-A13E-59D8C5693104}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{09D14BF6-9C1C-4CA6-A13E-59D8C5693104}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{09D14BF6-9C1C-4CA6-A13E-59D8C5693104}.Release|Any CPU.Build.0 = Release|Any CPU
-		{04AD5B45-3403-4D1F-94B8-C30DB8A9E380}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{04AD5B45-3403-4D1F-94B8-C30DB8A9E380}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{04AD5B45-3403-4D1F-94B8-C30DB8A9E380}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{04AD5B45-3403-4D1F-94B8-C30DB8A9E380}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB47A6DE-A946-BEE2-CAA6-4743C7D26E6F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB47A6DE-A946-BEE2-CAA6-4743C7D26E6F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB47A6DE-A946-BEE2-CAA6-4743C7D26E6F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB47A6DE-A946-BEE2-CAA6-4743C7D26E6F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C6E2082-3807-85BC-927F-F5874B7AC606}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6E2082-3807-85BC-927F-F5874B7AC606}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6E2082-3807-85BC-927F-F5874B7AC606}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6E2082-3807-85BC-927F-F5874B7AC606}.Release|Any CPU.Build.0 = Release|Any CPU
+		{148F172A-06FE-C22E-B85D-E550AA6A5DD2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{148F172A-06FE-C22E-B85D-E550AA6A5DD2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{148F172A-06FE-C22E-B85D-E550AA6A5DD2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{148F172A-06FE-C22E-B85D-E550AA6A5DD2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43F45382-4B42-51D7-55C9-D04BB334AB4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43F45382-4B42-51D7-55C9-D04BB334AB4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43F45382-4B42-51D7-55C9-D04BB334AB4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43F45382-4B42-51D7-55C9-D04BB334AB4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5A200FA-B593-5D06-425A-994DF8F0E08B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5A200FA-B593-5D06-425A-994DF8F0E08B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5A200FA-B593-5D06-425A-994DF8F0E08B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5A200FA-B593-5D06-425A-994DF8F0E08B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{026EB6C0-9F03-5A80-DC6C-D73E86C7638D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{026EB6C0-9F03-5A80-DC6C-D73E86C7638D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{026EB6C0-9F03-5A80-DC6C-D73E86C7638D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{026EB6C0-9F03-5A80-DC6C-D73E86C7638D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBC03D07-85E1-115C-AB90-0957D588C2C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBC03D07-85E1-115C-AB90-0957D588C2C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBC03D07-85E1-115C-AB90-0957D588C2C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBC03D07-85E1-115C-AB90-0957D588C2C9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
