@@ -1,7 +1,9 @@
 using FastEndpoints;
+using FitNet.DataAccess;
 
 WebApplicationBuilder builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddDataAccess(builder.Configuration);
 builder.Services.AddFastEndpoints();
 builder.Services.AddOpenApi();
 
