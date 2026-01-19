@@ -1,8 +1,11 @@
 ﻿using FitNet.Domain.Entities;
+using FitNet.Interfaces.Entity;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 using System.Reflection;
 
 namespace FitNet.DataAccess.Context;
+
 public class FitNetContext : DbContext
 {
     public FitNetContext(DbContextOptions options) : base(options)
@@ -26,5 +29,22 @@ public class FitNetContext : DbContext
         base.OnModelCreating(modelBuilder);
 
         modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+        ApplyGlobalFilters(modelBuilder);
+    }
+
+    private void ApplyGlobalFilters(ModelBuilder modelBuilder)
+    {
+        foreach (var entityType in modelBuilder.Model.GetEntityTypes())
+        {
+            if (typeof(IDeletable).IsAssignableFrom(entityType.ClrType))
+            {
+                var parameter = Expression.Parameter(entityType.ClrType, "e");
+                var property = Expression.Property(parameter, nameof(IDeletable.IsDeleted));
+                var filter = Expression.Lambda(Expression.Equal(property, Expression.Constant(false)), parameter);
+                
+                modelBuilder.Entity(entityType.ClrType).HasQueryFilter(filter);
+            }
+        }
     }
 }

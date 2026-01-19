@@ -3,28 +3,41 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace FitNet.DataAccess.Configuration;
+
 internal class ExerciseConfiguration : IEntityTypeConfiguration<Exercise>
 {
     public void Configure(EntityTypeBuilder<Exercise> builder)
     {
-        builder.OwnsOne(p => p.Repetition);
+        builder.HasKey(e => e.Id);
 
-        builder.HasOne(p => p.Equipment)
-                .WithMany()
-                .HasForeignKey(p => p.EquipmentId)
-                .IsRequired(false);
+        builder.Property(e => e.Name)
+            .IsRequired()
+            .HasMaxLength(200);
 
-        builder.HasOne(p => p.Workout)
-                .WithMany()
-                .HasForeignKey(p => p.WorkoutId);
+        builder.OwnsOne(e => e.Repetition, r =>
+        {
+            r.Property(m => m.Quantity).IsRequired();
+            r.Property(m => m.Unit).IsRequired();
+        });
 
-        builder.HasOne(p => p.WorkoutGroup)
-                .WithMany()
-                .HasForeignKey(p => p.WorkoutGroupId)
-                .IsRequired(false);
+        builder.HasOne(e => e.Equipment)
+            .WithMany(eq => eq.ExerciseList)
+            .HasForeignKey(e => e.EquipmentId)
+            .OnDelete(DeleteBehavior.Restrict)
+            .IsRequired(false);
 
-        builder
-            .HasMany(p => p.ContraIndicationList)
-            .WithMany(p => p.ExerciseList);
+        builder.HasOne(e => e.Workout)
+            .WithMany(w => w.ExerciseList)
+            .HasForeignKey(e => e.WorkoutId)
+            .OnDelete(DeleteBehavior.Restrict);
+
+        builder.HasOne(e => e.WorkoutGroup)
+            .WithMany(wg => wg.ExerciseList)
+            .HasForeignKey(e => e.WorkoutGroupId)
+            .OnDelete(DeleteBehavior.Restrict)
+            .IsRequired(false);
+
+        builder.HasMany(e => e.ContraIndicationList)
+            .WithMany(c => c.ExerciseList);
     }
 }
